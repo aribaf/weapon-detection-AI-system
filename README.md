@@ -1,21 +1,30 @@
-# sentinalsecure
-Object Detection and Alarming System for CCTV Cameras using YOLOv8 and Python
+# Weapon Detection AI System
+Real-Time CCTV Monitoring using YOLOv8 and Python
 
-Synopsis:
-Our project aims to develop an advanced object detection and alarming system for CCTV cameras using a modified version of the YOLOv8 model and the Python programming language. The system's objective is to detect dangerous objects, such as knives (weapons), in real-time and promptly notify nearby law enforcement officers or security personnel to prevent potential mishaps or security breaches.
+Overview:
+This advanced weapon detection AI system is designed for CCTV cameras, utilizing a modified YOLOv8 model with Python. It detects weapons, such as knives, in real-time and sends instant alerts to security personnel through SMS notifications, ensuring rapid response to potential threats.
 
-Technical Description:
-The system utilizes a modified version of YOLOv8, an advanced deep learning-based object detection model, to achieve accurate and efficient detection of objects in the CCTV camera feed. The YOLOv8 model is implemented using Python and leverages the power of PyTorch for seamless integration.
+Key Features:
+Real-Time Detection: Leverages a fine-tuned YOLOv8 model for accurate and efficient weapon detection.
+Instant Alerts: Integrates Twilio API to send SMS notifications with an image link via Imgur, enabling quick action by security personnel.
+Tech Stack: Python, OpenCV, PyTorch, YOLOv8, Twilio API, and Imgur API.
+User-Friendly Display: Utilizes Pygame for live video feed visualization.
+Security & Privacy Considerations:
+Environment Variables: Sensitive credentials (Twilio and Imgur API keys) are recommended to be stored as environment variables for enhanced security.
+Real-Time Notification: Immediate alerts help minimize potential threats and enhance overall security measures.
+Importance in Security:
+Proactively identifies weapons, ensuring quick response and preventing potential security breaches.
+Reduces reliance on manual monitoring by automating weapon detection and alerting processes.
+This project showcases an innovative approach to surveillance and security, utilizing cutting-edge AI technology to detect weapons in real-time and alert relevant authorities swiftly.
 
-To implement this system, we employ a tech stack that includes Python, OpenCV (cv2), PyTorch, and the modified weights and configuration files of the YOLOv8 model. These modified files are created through fine-tuning or transfer learning techniques, ensuring that the model is specifically trained to identify dangerous objects like knives.
 
-The CCTV camera feed is accessed using OpenCV's VideoCapture class, allowing us to capture frames in real-time. Each frame represents a single image for object detection.
 
-We preprocess the captured frames and pass them through the modified YOLOv8 model. The model performs a forward pass, efficiently analyzing the image to detect and localize objects. By filtering the model's output, we specifically identify dangerous objects, such as knives, from the detected object classes.
 
-Upon detecting a dangerous object, our system triggers an alarm to promptly alert nearby authorities. This can be achieved through various means, such as playing an audible alarm sound, sending notifications to law enforcement officers using APIs or messaging services, or activating physical alarm devices located in the vicinity.
 
-Tech Stack:
+
+
+
+
 - Python: Programming language used for implementing the system and integrating various components.
 - OpenCV (cv2): Library employed for accessing the CCTV camera feed and capturing frames.
 - PyTorch: Deep learning framework utilized to load and utilize the modified YOLOv8 model.
